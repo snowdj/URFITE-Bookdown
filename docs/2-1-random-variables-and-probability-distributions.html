@@ -6,24 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Introduction to Econometrics with R</title>
-  <meta name="description" content="<em>Introduction to Econometrics with R</em> is an interactive companion to the well-received textbook <em>Introduction to Econometrics</em> by James H. Stock and Mark W. Watson (2015). It guides students in implementing the empirical applications presented throughout the book using the statistical software package R.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="description" content="Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. ‘Introduction to Econometrics with R’ is an interactive companion to the well-received textbook ‘Introduction to Econometrics’ by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to Econometrics with R" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:image" content="images/cover.png" />
-  <meta property="og:description" content="<em>Introduction to Econometrics with R</em> is an interactive companion to the well-received textbook <em>Introduction to Econometrics</em> by James H. Stock and Mark W. Watson (2015). It guides students in implementing the empirical applications presented throughout the book using the statistical software package R." />
-  <meta name="github-repo" content="Emwikts1970/URFITE-Bookdown" />
+  <meta property="og:url" content="https://www.econometrics-with-r.org/" />
+  <meta property="og:image" content="https://www.econometrics-with-r.org/images/cover.png" />
+  <meta property="og:description" content="Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. ‘Introduction to Econometrics with R’ is an interactive companion to the well-received textbook ‘Introduction to Econometrics’ by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js." />
+  <meta name="github-repo" content="mca91/EconometricsWithR" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Introduction to Econometrics with R" />
   
-  <meta name="twitter:description" content="<em>Introduction to Econometrics with R</em> is an interactive companion to the well-received textbook <em>Introduction to Econometrics</em> by James H. Stock and Mark W. Watson (2015). It guides students in implementing the empirical applications presented throughout the book using the statistical software package R." />
-  <meta name="twitter:image" content="images/cover.png" />
+  <meta name="twitter:description" content="Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. ‘Introduction to Econometrics with R’ is an interactive companion to the well-received textbook ‘Introduction to Econometrics’ by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js." />
+  <meta name="twitter:image" content="https://www.econometrics-with-r.org/images/cover.png" />
+
+<meta name="author" content="Christoph Hanck, Martin Arnold, Alexander Gerber and Martin Schmelzer">
 
 
-
+<meta name="date" content="2018-10-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -56,16 +58,10 @@
 
 <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico|Source+Sans+Pro" rel="stylesheet">
 
-<!-- function to adjust height of iframes automatically depending on content loaded -->
-
-<script>
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
-</script>
-
 <script src="js/hideOutput.js"></script>
-<script type="text/javascript" src="MathJax-2.7.2/MathJax.js?config=default"></script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/default.js"></script>
 
  <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -143,7 +139,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://www.oek.wiwi.uni-due.de/en/">Chair of Econometrics @ Uni-DUE</a></li>
+<li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -275,6 +271,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="10.4" data-path="10-4-regression-with-time-fixed-effects.html"><a href="10-4-regression-with-time-fixed-effects.html"><i class="fa fa-check"></i><b>10.4</b> Regression with Time Fixed Effects</a></li>
 <li class="chapter" data-level="10.5" data-path="10-5-tferaaseffer.html"><a href="10-5-tferaaseffer.html"><i class="fa fa-check"></i><b>10.5</b> The Fixed Effects Regression Assumptions and Standard Errors for Fixed Effects Regression</a></li>
 <li class="chapter" data-level="10.6" data-path="10-6-drunk-driving-laws-and-traffic-deaths.html"><a href="10-6-drunk-driving-laws-and-traffic-deaths.html"><i class="fa fa-check"></i><b>10.6</b> Drunk Driving Laws and Traffic Deaths</a></li>
+<li class="chapter" data-level="10.7" data-path="10-7-exercises-8.html"><a href="10-7-exercises-8.html"><i class="fa fa-check"></i><b>10.7</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="11-rwabdv.html"><a href="11-rwabdv.html"><i class="fa fa-check"></i><b>11</b> Regression with a Binary Dependent Variable</a><ul>
 <li class="chapter" data-level="11.1" data-path="11-1-binary-dependent-variables-and-the-linear-probability-model.html"><a href="11-1-binary-dependent-variables-and-the-linear-probability-model.html"><i class="fa fa-check"></i><b>11.1</b> Binary Dependent Variables and the Linear Probability Model</a></li>
@@ -284,7 +281,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="11.3" data-path="11-3-estimation-and-inference-in-the-logit-and-probit-models.html"><a href="11-3-estimation-and-inference-in-the-logit-and-probit-models.html"><i class="fa fa-check"></i><b>11.3</b> Estimation and Inference in the Logit and Probit Models</a></li>
 <li class="chapter" data-level="11.4" data-path="11-4-application-to-the-boston-hmda-data.html"><a href="11-4-application-to-the-boston-hmda-data.html"><i class="fa fa-check"></i><b>11.4</b> Application to the Boston HMDA Data</a></li>
-<li class="chapter" data-level="11.5" data-path="11-5-exercises-8.html"><a href="11-5-exercises-8.html"><i class="fa fa-check"></i><b>11.5</b> Exercises</a></li>
+<li class="chapter" data-level="11.5" data-path="11-5-exercises-9.html"><a href="11-5-exercises-9.html"><i class="fa fa-check"></i><b>11.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="12-ivr.html"><a href="12-ivr.html"><i class="fa fa-check"></i><b>12</b> Instrumental Variables Regression</a><ul>
 <li class="chapter" data-level="12.1" data-path="12-1-TIVEWASRAASI.html"><a href="12-1-TIVEWASRAASI.html"><i class="fa fa-check"></i><b>12.1</b> The IV Estimator with a Single Regressor and a Single Instrument</a></li>
@@ -292,7 +289,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12.3" data-path="12-3-civ.html"><a href="12-3-civ.html"><i class="fa fa-check"></i><b>12.3</b> Checking Instrument Validity</a></li>
 <li class="chapter" data-level="12.4" data-path="12-4-attdfc.html"><a href="12-4-attdfc.html"><i class="fa fa-check"></i><b>12.4</b> Application to the Demand for Cigarettes</a></li>
 <li class="chapter" data-level="12.5" data-path="12-5-where-do-valid-instruments-come-from.html"><a href="12-5-where-do-valid-instruments-come-from.html"><i class="fa fa-check"></i><b>12.5</b> Where Do Valid Instruments Come From?</a></li>
-<li class="chapter" data-level="12.6" data-path="12-6-exercises-9.html"><a href="12-6-exercises-9.html"><i class="fa fa-check"></i><b>12.6</b> Exercises</a></li>
+<li class="chapter" data-level="12.6" data-path="12-6-exercises-10.html"><a href="12-6-exercises-10.html"><i class="fa fa-check"></i><b>12.6</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="13-eaqe.html"><a href="13-eaqe.html"><i class="fa fa-check"></i><b>13</b> Experiments and Quasi-Experiments</a><ul>
 <li class="chapter" data-level="13.1" data-path="13-1-potential-outcomes-causal-effects-and-idealized-experiments.html"><a href="13-1-potential-outcomes-causal-effects-and-idealized-experiments.html"><i class="fa fa-check"></i><b>13.1</b> Potential Outcomes, Causal Effects and Idealized Experiments</a></li>
@@ -354,7 +351,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><em>Introduction to Econometrics with R</em></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Econometrics with R</a>
           </h1>
         </div>
 
@@ -384,7 +381,7 @@ This book is in <b>Open Review</b>. We want your feedback to make the book bette
 <p>A typical example for a discrete random variable <span class="math inline">\(D\)</span> is the result of a dice roll: in terms of a random experiment this is nothing but randomly selecting a sample of size <span class="math inline">\(1\)</span> from a set of numbers which are mutually exclusive outcomes. Here, the sample space is <span class="math inline">\(\{1,2,3,4,5,6\}\)</span> and we can think of many different events, e.g., ‘the observed outcome lies between <span class="math inline">\(2\)</span> and <span class="math inline">\(5\)</span>’.</p>
 <p>A basic function to draw random samples from a specified set of elements is the the function <tt>sample()</tt>, see <code>?sample</code>. We can use it to simulate the random outcome of a dice roll. Let’s roll the dice!</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">1</span>) </code></pre></div>
-<pre><code>## [1] 3</code></pre>
+<pre><code>## [1] 5</code></pre>
 <p>The probability distribution of a discrete random variable is the list of all possible values of the variable and their probabilities which sum to <span class="math inline">\(1\)</span>. The cumulative probability distribution function gives the probability that the random variable is less than or equal to a particular value.</p>
 <p>For the dice roll, the probability distribution and the cumulative probability distribution are summarized in Table <a href="2-1-random-variables-and-probability-distributions.html#tab:pdist">2.1</a>.</p>
 <table>
@@ -472,7 +469,7 @@ probability &lt;-<span class="st"> </span><span class="kw">rep</span>(<span clas
 <span class="kw">plot</span>(probability, 
      <span class="dt">main =</span> <span class="st">&quot;Probability Distribution&quot;</span>,
      <span class="dt">xlab =</span> <span class="st">&quot;outcomes&quot;</span>) </code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>For the cumulative probability distribution we need the cumulative probabilities, i.e., we need the cumulative sums of the vector <tt>probability</tt>. These sums can be computed using <tt>cumsum()</tt>.</p>
 <div class="unfolded">
@@ -483,14 +480,14 @@ cum_probability &lt;-<span class="st"> </span><span class="kw">cumsum</span>(pro
 <span class="kw">plot</span>(cum_probability, 
      <span class="dt">xlab =</span> <span class="st">&quot;outcomes&quot;</span>, 
      <span class="dt">main =</span> <span class="st">&quot;Cumulative Probability Distribution&quot;</span>) </code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="bernoulli-trials" class="section level3 unnumbered">
 <h3>Bernoulli Trials</h3>
 <p>The set of elements from which <tt>sample()</tt> draws outcomes does not have to consist of numbers only. We might as well simulate coin tossing with outcomes <span class="math inline">\(H\)</span> (heads) and <span class="math inline">\(T\)</span> (tails).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;H&quot;</span>, <span class="st">&quot;T&quot;</span>), <span class="dv">1</span>) </code></pre></div>
-<pre><code>## [1] &quot;T&quot;</code></pre>
+<pre><code>## [1] &quot;H&quot;</code></pre>
 <p>The result of a single coin toss is a <em>Bernoulli</em> distributed random variable, i.e., a variable with two possible distinct outcomes.</p>
 <p>Imagine you are about to toss a coin <span class="math inline">\(10\)</span> times in a row and wonder how likely it is to end up with a <span class="math inline">\(5\)</span> times heads. This is a typical example of what we call a <em>Bernoulli experiment</em> as it consists of <span class="math inline">\(n=10\)</span> Bernoulli trials that are independent of each other and we are interested in the likelihood of observing <span class="math inline">\(k=5\)</span> successes <span class="math inline">\(H\)</span> that occur with probability <span class="math inline">\(p=0.5\)</span> (assuming a fair coin) in each trial. Note that the order of the outcomes does not matter here.</p>
 <p>It is a <a href="https://en.wikipedia.org/wiki/Binomial_distribution">well known result</a> that the number of successes <span class="math inline">\(k\)</span> in a Bernoulli experiment follows a binomial distribution. We denote this as</p>
@@ -529,7 +526,7 @@ probability &lt;-<span class="st"> </span><span class="kw">dbinom</span>(<span c
 <span class="kw">plot</span>(<span class="dt">x =</span> k, 
      <span class="dt">y =</span> probability,
      <span class="dt">main =</span> <span class="st">&quot;Probability Distribution Function&quot;</span>) </code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>In a similar fashion we may plot the cumulative distribution function of <span class="math inline">\(k\)</span> by executing the following code chunk:</p>
 <div class="unfolded">
@@ -542,13 +539,13 @@ prob &lt;-<span class="st"> </span><span class="kw">dbinom</span>(<span class="d
 <span class="kw">plot</span>(<span class="dt">x =</span> k, 
      <span class="dt">y =</span> prob,
      <span class="dt">main =</span> <span class="st">&quot;Cumulative Distribution Function&quot;</span>) </code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="expected-value-mean-and-variance" class="section level3 unnumbered">
 <h3>Expected Value, Mean and Variance</h3>
 <p>The expected value of a random variable is, loosely, the long-run average value of its outcomes when the number of repeated trials is large. For a discrete random variable, the expected value is computed as a weighted average of its possible outcomes whereby the weights are the related probabilities. This is formalized in Key Concept 2.1.</p>
-<div class="keyconcept">
+<div id="KC2.1" class="keyconcept" <div="">
 <h3 class="right">
 Key Concept 2.1
 </h3>
@@ -585,7 +582,7 @@ where the notation <span class="math inline">\(\sum_{i=1}^k y_i p_i\)</span> mea
 <pre><code>## [1] 3.5039</code></pre>
 <p>We find the sample mean to be fairly close to the expected value. This result will be discussed in Chapter <a href="2-2-RSATDOSA.html#RSATDOSA">2.2</a> in more detail.</p>
 <p>Other frequently encountered measures are the variance and the standard deviation. Both are measures of the <em>dispersion</em> of a random variable.</p>
-<div class="keyconcept">
+<div id="KC2.2" class="keyconcept">
 <h3 class="right">
 Key Concept 2.2
 </h3>
@@ -613,7 +610,7 @@ The variance of the discrete random variable <span class="math inline">\(Y\)</sp
 <p>Since a continuous random variable takes on a continuum of possible values, we cannot use the concept of a probability distribution as used for discrete random variables. Instead, the probability distribution of a continuous random variable is summarized by its <em>probability density function</em> (PDF).</p>
 <p>The cumulative probability distribution function (CDF) for a continuous random variable is defined just as in the discrete case. Hence, the cumulative probability distribution of a continuous random variables states the probability that the random variable is less than or equal to a particular value.</p>
 <p>For completeness, we present revisions of Key Concepts 2.1 and 2.2 for the continuous case.</p>
-<div class="keyconcept">
+<div id="KC2.3" class="keyconcept">
 <h3 class="right">
 Key Concept 2.3
 </h3>
@@ -665,7 +662,7 @@ Probabilities, Expected Value and Variance of a Continuous Random Variable
 f &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="dv">3</span> <span class="op">/</span><span class="st"> </span>x<span class="op">^</span><span class="dv">4</span>
 g &lt;-<span class="st"> </span><span class="cf">function</span>(x) x <span class="op">*</span><span class="st"> </span><span class="kw">f</span>(x)
 h &lt;-<span class="st"> </span><span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">f</span>(x)</code></pre></div>
-<p>Next, we use <tt>integrate()</tt> and set lower and upper limits of integration to <span class="math inline">\(1\)</span> and <span class="math inline">\(\infty\)</span> using arguments <tt>lower</tt> and <tt>upper</tt>. By default, <tt>integrate()</tt> prints the result along with an estimate of the approximation error to the console. However, the outcome is not a numeric value one can readily do further calculation with. In order to get only a numeric value of the integral, we need to use the <tt><span class="math inline">\(&lt;/tt&gt; operator in conjunction with &lt;tt&gt;value&lt;/tt&gt;. The &lt;tt&gt;\)</span></tt> operator is used to extract elements by name from an object of type <tt>list</tt>.</p>
+<p>Next, we use <tt>integrate()</tt> and set lower and upper limits of integration to <span class="math inline">\(1\)</span> and <span class="math inline">\(\infty\)</span> using arguments <tt>lower</tt> and <tt>upper</tt>. By default, <tt>integrate()</tt> prints the result along with an estimate of the approximation error to the console. However, the outcome is not a numeric value one can readily do further calculation with. In order to get only a numeric value of the integral, we need to use the <tt>$</tt> operator in conjunction with <tt>value</tt>. The <tt>$</tt> operator is used to extract elements by name from an object of type <tt>list</tt>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># compute area under the density curve</span>
 area &lt;-<span class="st"> </span><span class="kw">integrate</span>(f, 
                  <span class="dt">lower =</span> <span class="dv">1</span>, 
@@ -707,7 +704,7 @@ f(x) = \frac{1}{\sqrt{2 \pi} \sigma} \exp{-(x - \mu)^2/(2 \sigma^2)}.
       <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="fl">3.5</span>, <span class="fl">3.5</span>),
       <span class="dt">ylab =</span> <span class="st">&quot;Density&quot;</span>, 
       <span class="dt">main =</span> <span class="st">&quot;Standard Normal Density Function&quot;</span>) </code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-35-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-36-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>We can obtain the density at different positions by passing a vector to <tt>dnorm()</tt>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># compute denstiy at x=-1.96, x=0 and x=1.96</span>
@@ -720,7 +717,7 @@ f(x) = \frac{1}{\sqrt{2 \pi} \sigma} \exp{-(x - \mu)^2/(2 \sigma^2)}.
       <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="fl">3.5</span>, <span class="fl">3.5</span>), 
       <span class="dt">ylab =</span> <span class="st">&quot;Density&quot;</span>, 
       <span class="dt">main =</span> <span class="st">&quot;Standard Normal Cumulative Distribution Function&quot;</span>)</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-37-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-38-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>We can also use <tt>R</tt> to calculate the probability of events associated with a standard normal variate.</p>
 <p>Let us say we are interested in <span class="math inline">\(P(Z \leq 1.337)\)</span>. For some continuous random variable <span class="math inline">\(Z\)</span> on <span class="math inline">\([-\infty,\infty]\)</span> with density <span class="math inline">\(g(x)\)</span> we would have to determine <span class="math inline">\(G(x)\)</span>, the anti-derivative of <span class="math inline">\(g(x)\)</span> so that</p>
@@ -759,7 +756,7 @@ quants &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">
 <span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>(<span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">1.96</span>)) </code></pre></div>
 <pre><code>## [1] 0.9500042</code></pre>
 <p>To make statements about the probability of observing outcomes of <span class="math inline">\(Y\)</span> in some specific range is more convenient when we standardize first as shown in Key Concept 2.4.</p>
-<div class="keyconcept">
+<div id="KC2.4" class="keyconcept">
 <h3 class="right">
 Key Concept 2.4
 </h3>
@@ -830,7 +827,7 @@ Z_1^2 + \dots + Z_M^2 = \sum_{m=1}^M Z_m^2 \sim \chi^2_M \ \ \text{with} \ \ Z_m
        <span class="kw">c</span>(<span class="st">&quot;PDF&quot;</span>, <span class="st">&quot;CDF&quot;</span>), 
        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>), 
        <span class="dt">lty =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-47-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-49-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>Since the outcomes of a <span class="math inline">\(\chi^2_M\)</span> distributed random variable are always positive, the support of the related PDF and CDF is <span class="math inline">\(\mathbb{R}_{\geq0}\)</span>.</p>
 <p>As expectation and variance depend (solely!) on the degrees of freedom, the distribution’s shape changes drastically if we vary the number of squared standard normals that are summed up. This relation is often depicted by overlaying densities for different <span class="math inline">\(M\)</span>, see the <a href="https://en.wikipedia.org/wiki/Chi-squared_distribution">Wikipedia Article</a>.</p>
@@ -857,7 +854,7 @@ Z_1^2 + \dots + Z_M^2 = \sum_{m=1}^M Z_m^2 \sim \chi^2_M \ \ \text{with} \ \ Z_m
        <span class="dt">col =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">7</span> , 
        <span class="dt">lty =</span> <span class="dv">1</span>, 
        <span class="dt">title =</span> <span class="st">&quot;D.F.&quot;</span>)</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-48-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-50-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>Increasing the degrees of freedom shifts the distribution to the right (the mode becomes larger) and increases the dispersion (the distribution’s variance grows).</p>
 </div>
@@ -905,7 +902,7 @@ Z_1^2 + \dots + Z_M^2 = \sum_{m=1}^M Z_m^2 \sim \chi^2_M \ \ \text{with} \ \ Z_m
        <span class="kw">c</span>(<span class="st">&quot;N(0, 1)&quot;</span>, <span class="st">&quot;M=2&quot;</span>, <span class="st">&quot;M=4&quot;</span>, <span class="st">&quot;M=25&quot;</span>), 
        <span class="dt">col =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, 
        <span class="dt">lty =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-49-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-51-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>The plot illustrates what has been said in the previous paragraph: as the degrees of freedom increase, the shape of the <span class="math inline">\(t\)</span> distribution comes closer to that of a standard normal bell curve. Already for <span class="math inline">\(M=25\)</span> we find little difference to the standard normal density. If <span class="math inline">\(M\)</span> is small, we find the distribution to have heavier tails than a standard normal, i.e., it has a “fatter” bell shape.</p>
 </div>
@@ -932,17 +929,12 @@ y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</sp
 
 <span class="co"># draw the polygon</span>
 <span class="kw">polygon</span>(x, y, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>)</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-51-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-53-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>The <span class="math inline">\(F\)</span> distribution is related to many other distributions. An important special case encountered in econometrics arises if the denominator degrees of freedom are large such that the <span class="math inline">\(F_{M,n}\)</span> distribution can be approximated by the <span class="math inline">\(F_{M,\infty}\)</span> distribution which turns out to be simply the distribution of a <span class="math inline">\(\chi^2_M\)</span> random variable divided by its degrees of freedom <span class="math inline">\(M\)</span>,</p>
 <p><span class="math display">\[ W/M \sim F_{M,\infty} \ \ , \ \ W \sim \chi^2_M. \]</span></p>
-
-<div data-datacamp-exercise data-lang="r">
-<code data-type="sample-code">
-# You may use this widget to play around with the functions presented above
-</code>
-</div>
-
+<iframe src="DCL/playground.html" frameborder="0" scrolling="no" style="width:100%;height:340px">
+</iframe>
 </div>
 </div>
             </section>
@@ -980,8 +972,11 @@ gitbook.start({
 "family": "serif",
 "size": 1
 },
-"edit": null,
-"download": null,
+"edit": {
+"link": "https://github.com/mca91/EconometricsWithR/edit/master/02-ch2.Rmd",
+"text": "Edit"
+},
+"download": ["ITER.pdf"],
 "toc": {
 "collapse": "subsection",
 "scroll_highlight": true
@@ -996,7 +991,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

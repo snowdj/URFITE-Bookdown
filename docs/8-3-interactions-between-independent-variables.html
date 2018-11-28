@@ -6,24 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Introduction to Econometrics with R</title>
-  <meta name="description" content="<em>Introduction to Econometrics with R</em> is an interactive companion to the well-received textbook <em>Introduction to Econometrics</em> by James H. Stock and Mark W. Watson (2015). It guides students in implementing the empirical applications presented throughout the book using the statistical software package R.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="description" content="Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. ‘Introduction to Econometrics with R’ is an interactive companion to the well-received textbook ‘Introduction to Econometrics’ by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to Econometrics with R" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:image" content="images/cover.png" />
-  <meta property="og:description" content="<em>Introduction to Econometrics with R</em> is an interactive companion to the well-received textbook <em>Introduction to Econometrics</em> by James H. Stock and Mark W. Watson (2015). It guides students in implementing the empirical applications presented throughout the book using the statistical software package R." />
-  <meta name="github-repo" content="Emwikts1970/URFITE-Bookdown" />
+  <meta property="og:url" content="https://www.econometrics-with-r.org/" />
+  <meta property="og:image" content="https://www.econometrics-with-r.org/images/cover.png" />
+  <meta property="og:description" content="Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. ‘Introduction to Econometrics with R’ is an interactive companion to the well-received textbook ‘Introduction to Econometrics’ by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js." />
+  <meta name="github-repo" content="mca91/EconometricsWithR" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Introduction to Econometrics with R" />
   
-  <meta name="twitter:description" content="<em>Introduction to Econometrics with R</em> is an interactive companion to the well-received textbook <em>Introduction to Econometrics</em> by James H. Stock and Mark W. Watson (2015). It guides students in implementing the empirical applications presented throughout the book using the statistical software package R." />
-  <meta name="twitter:image" content="images/cover.png" />
+  <meta name="twitter:description" content="Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. ‘Introduction to Econometrics with R’ is an interactive companion to the well-received textbook ‘Introduction to Econometrics’ by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js." />
+  <meta name="twitter:image" content="https://www.econometrics-with-r.org/images/cover.png" />
+
+<meta name="author" content="Christoph Hanck, Martin Arnold, Alexander Gerber and Martin Schmelzer">
 
 
-
+<meta name="date" content="2018-10-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -56,16 +58,10 @@
 
 <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico|Source+Sans+Pro" rel="stylesheet">
 
-<!-- function to adjust height of iframes automatically depending on content loaded -->
-
-<script>
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
-</script>
-
 <script src="js/hideOutput.js"></script>
-<script type="text/javascript" src="MathJax-2.7.2/MathJax.js?config=default"></script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/default.js"></script>
 
  <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -143,7 +139,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://www.oek.wiwi.uni-due.de/en/">Chair of Econometrics @ Uni-DUE</a></li>
+<li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -275,6 +271,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="10.4" data-path="10-4-regression-with-time-fixed-effects.html"><a href="10-4-regression-with-time-fixed-effects.html"><i class="fa fa-check"></i><b>10.4</b> Regression with Time Fixed Effects</a></li>
 <li class="chapter" data-level="10.5" data-path="10-5-tferaaseffer.html"><a href="10-5-tferaaseffer.html"><i class="fa fa-check"></i><b>10.5</b> The Fixed Effects Regression Assumptions and Standard Errors for Fixed Effects Regression</a></li>
 <li class="chapter" data-level="10.6" data-path="10-6-drunk-driving-laws-and-traffic-deaths.html"><a href="10-6-drunk-driving-laws-and-traffic-deaths.html"><i class="fa fa-check"></i><b>10.6</b> Drunk Driving Laws and Traffic Deaths</a></li>
+<li class="chapter" data-level="10.7" data-path="10-7-exercises-8.html"><a href="10-7-exercises-8.html"><i class="fa fa-check"></i><b>10.7</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="11-rwabdv.html"><a href="11-rwabdv.html"><i class="fa fa-check"></i><b>11</b> Regression with a Binary Dependent Variable</a><ul>
 <li class="chapter" data-level="11.1" data-path="11-1-binary-dependent-variables-and-the-linear-probability-model.html"><a href="11-1-binary-dependent-variables-and-the-linear-probability-model.html"><i class="fa fa-check"></i><b>11.1</b> Binary Dependent Variables and the Linear Probability Model</a></li>
@@ -284,7 +281,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="11.3" data-path="11-3-estimation-and-inference-in-the-logit-and-probit-models.html"><a href="11-3-estimation-and-inference-in-the-logit-and-probit-models.html"><i class="fa fa-check"></i><b>11.3</b> Estimation and Inference in the Logit and Probit Models</a></li>
 <li class="chapter" data-level="11.4" data-path="11-4-application-to-the-boston-hmda-data.html"><a href="11-4-application-to-the-boston-hmda-data.html"><i class="fa fa-check"></i><b>11.4</b> Application to the Boston HMDA Data</a></li>
-<li class="chapter" data-level="11.5" data-path="11-5-exercises-8.html"><a href="11-5-exercises-8.html"><i class="fa fa-check"></i><b>11.5</b> Exercises</a></li>
+<li class="chapter" data-level="11.5" data-path="11-5-exercises-9.html"><a href="11-5-exercises-9.html"><i class="fa fa-check"></i><b>11.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="12-ivr.html"><a href="12-ivr.html"><i class="fa fa-check"></i><b>12</b> Instrumental Variables Regression</a><ul>
 <li class="chapter" data-level="12.1" data-path="12-1-TIVEWASRAASI.html"><a href="12-1-TIVEWASRAASI.html"><i class="fa fa-check"></i><b>12.1</b> The IV Estimator with a Single Regressor and a Single Instrument</a></li>
@@ -292,7 +289,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12.3" data-path="12-3-civ.html"><a href="12-3-civ.html"><i class="fa fa-check"></i><b>12.3</b> Checking Instrument Validity</a></li>
 <li class="chapter" data-level="12.4" data-path="12-4-attdfc.html"><a href="12-4-attdfc.html"><i class="fa fa-check"></i><b>12.4</b> Application to the Demand for Cigarettes</a></li>
 <li class="chapter" data-level="12.5" data-path="12-5-where-do-valid-instruments-come-from.html"><a href="12-5-where-do-valid-instruments-come-from.html"><i class="fa fa-check"></i><b>12.5</b> Where Do Valid Instruments Come From?</a></li>
-<li class="chapter" data-level="12.6" data-path="12-6-exercises-9.html"><a href="12-6-exercises-9.html"><i class="fa fa-check"></i><b>12.6</b> Exercises</a></li>
+<li class="chapter" data-level="12.6" data-path="12-6-exercises-10.html"><a href="12-6-exercises-10.html"><i class="fa fa-check"></i><b>12.6</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="13-eaqe.html"><a href="13-eaqe.html"><i class="fa fa-check"></i><b>13</b> Experiments and Quasi-Experiments</a><ul>
 <li class="chapter" data-level="13.1" data-path="13-1-potential-outcomes-causal-effects-and-idealized-experiments.html"><a href="13-1-potential-outcomes-causal-effects-and-idealized-experiments.html"><i class="fa fa-check"></i><b>13.1</b> Potential Outcomes, Causal Effects and Idealized Experiments</a></li>
@@ -354,7 +351,7 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><em>Introduction to Econometrics with R</em></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Econometrics with R</a>
           </h1>
         </div>
 
@@ -395,7 +392,7 @@ This book is in <b>Open Review</b>. We want your feedback to make the book bette
 <p>We know that <span class="math inline">\(\beta_1\)</span> measures the average difference in <span class="math inline">\(\ln(Earnings)\)</span> between individuals with and without a college degree and <span class="math inline">\(\beta_2\)</span> is the gender differential in <span class="math inline">\(\ln(Earnings)\)</span>, ceteris paribus. This model <em>does not</em> allow us to determine if there is a gender specific effect of having a college degree and, if so, <em>how strong</em> this effect is. It is easy to come up with a model specification that allows to investigate this:</p>
 <p><span class="math display">\[ Y_i = \beta_0 + \beta_1 \times D_{1i} + \beta_2 \times D_{2i} + \beta_3 \times (D_{1i} \times D_{2i}) + u_i \]</span></p>
 <p><span class="math inline">\((D_{1i} \times D_{2i})\)</span> is called an interaction term and <span class="math inline">\(\beta_3\)</span> measures the difference in the effect of having a college degree for women versus men.</p>
-<div class="keyconcept">
+<div id="KC8.3" class="keyconcept">
 <h3 class="right">
 Key Concept 8.3
 </h3>
@@ -510,7 +507,7 @@ Now let <span class="math inline">\(X_i\)</span> denote the years of working exp
 <p><span class="math display">\[ Y_i = \beta_0 + \beta_1 X_i + \beta_2 (X_i \times D_i) + u_i. \]</span></p>
 <p>This model states that the expected impact of an additional year of work experience on earnings differs for for college graduates and non-graduates but that graduating on its own does not increase earnings.</p>
 <p>All three regression functions can be visualized by straight lines. Key Concept 8.4 summarizes the differences.</p>
-<div class="keyconcept">
+<div id="KC8.4" class="keyconcept">
 <h3 class="right">
 Key Concept 8.4
 </h3>
@@ -586,7 +583,7 @@ mod3_coef &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="
 <span class="kw">abline</span>(<span class="dt">coef =</span> <span class="kw">c</span>(mod3_coef[<span class="dv">1</span>], mod3_coef[<span class="dv">2</span>] <span class="op">+</span><span class="st"> </span>mod3_coef[<span class="dv">3</span>]), 
        <span class="dt">col =</span> <span class="st">&quot;green&quot;</span>,
        <span class="dt">lwd =</span> <span class="fl">1.5</span>)</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-340-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-342-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="application-to-the-student-teacher-ratio-and-the-percentage-of-english-learners-1" class="section level4 unnumbered">
@@ -653,7 +650,7 @@ coefs &lt;-<span class="st"> </span>bci_model<span class="op">$</span>coefficien
        <span class="dt">pch =</span> <span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">20</span>), 
        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>), 
        <span class="dt">legend =</span> <span class="kw">c</span>(<span class="st">&quot;HiEL = 0&quot;</span>, <span class="st">&quot;HiEL = 1&quot;</span>))</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-342-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-344-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="interactions-between-two-continuous-variables" class="section level4 unnumbered">
@@ -667,7 +664,7 @@ coefs &lt;-<span class="st"> </span>bci_model<span class="op">$</span>coefficien
 Y_i = (\beta_1 + \beta_3 X_2) \Delta X_1 + (\beta_2 + \beta_3 X_1) \Delta X_2 + \beta_3\Delta X_1 \Delta X_2. \tag{8.2}
 \end{align}\]</span>
 <p>Key Concept 8.5 summarizes interactions between two regressors in multiple regression.</p>
-<div class="keyconcept">
+<div id="KC8.5" class="keyconcept">
 <h3 class="right">
 Key Concept 8.5
 </h3>
@@ -888,7 +885,7 @@ JM4C &lt;-Journals_mod4<span class="op">$</span>coefficients
                 JM4C[<span class="dv">2</span>] <span class="op">+</span><span class="st"> </span>JM4C[<span class="dv">5</span>] <span class="op">*</span><span class="st"> </span><span class="kw">log</span>(<span class="dv">5</span>)),
        <span class="dt">col =</span> <span class="st">&quot;darkgreen&quot;</span>,
        <span class="dt">lwd =</span> <span class="fl">1.5</span>)</code></pre></div>
-<p><img src="Introduction_to_Econometrics_with_R_files/figure-html/unnamed-chunk-355-1.png" width="672" /></p>
+<p><img src="ITER_files/figure-html/unnamed-chunk-357-1.png" width="672" /></p>
 </div>
 <p>As can be seen from plots (a) and (b), the relation between subscriptions and the citation price is adverse and nonlinear. Log-transforming both variables makes it approximately linear. Plot (c) shows that the price elasticity of journal subscriptions depends on the journal’s age: the red line shows the estimated relationship for <span class="math inline">\(Age=80\)</span> while the green line represents the prediction from model <span class="math inline">\((IV)\)</span> for <span class="math inline">\(Age=5\)</span>.</p>
 <p>Which conclusion can be drawn?</p>
@@ -942,8 +939,11 @@ gitbook.start({
 "family": "serif",
 "size": 1
 },
-"edit": null,
-"download": null,
+"edit": {
+"link": "https://github.com/mca91/EconometricsWithR/edit/master/08-ch8.Rmd",
+"text": "Edit"
+},
+"download": ["ITER.pdf"],
 "toc": {
 "collapse": "subsection",
 "scroll_highlight": true
@@ -958,7 +958,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

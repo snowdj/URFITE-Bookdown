@@ -179,7 +179,7 @@ Concept 2.1.
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
 cat('
-<div class = "keyconcept"> 
+<div class = "keyconcept" <div class = "keyconcept" id="KC2.1"> 
 <h3 class = "right"> Key Concept 2.1 </h3> 
 <h3 class= "left"> Expected Value and the Mean </h3> 
 
@@ -259,7 +259,7 @@ We find the sample mean to be fairly close to the expected value. This result wi
 Other frequently encountered measures are the variance and the standard deviation. Both are measures of the *dispersion* of a random variable.
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
-cat('<div class = "keyconcept"> 
+cat('<div class = "keyconcept" id="KC2.2">
 <h3 class = "right"> Key Concept 2.2 </h3> 
 <h3 class= "left"> Variance and Standard Deviation </h3> 
 
@@ -316,7 +316,7 @@ random variable is less than or equal to a particular value.
 For completeness, we present revisions of Key Concepts 2.1 and 2.2 for the continuous case.
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
-cat('<div class = "keyconcept"> 
+cat('<div class = "keyconcept" id="KC2.3"> 
 <h3 class = "right"> Key Concept 2.3 </h3> 
 <h3 class= "left"> Probabilities, Expected Value and Variance of a Continuous Random Variable </h3> 
 
@@ -399,7 +399,7 @@ g <- function(x) x * f(x)
 h <- function(x) x^2 * f(x)
 ```
 
-Next, we use `r ttcode("integrate()")` and set lower and upper limits of integration to $1$ and $\infty$ using arguments `r ttcode("lower")` and `r ttcode("upper")`. By default, `r ttcode("integrate()")` prints the result along with an estimate of the approximation error to the console. However, the outcome is not a numeric value one can readily do further calculation with. In order to get only a numeric value of the integral, we need to use the `r ttcode("$")` operator in conjunction with `r ttcode("value")`. The `r ttcode("$")` operator is used to extract elements by name from an object of type `r ttcode("list")`. 
+Next, we use `r ttcode("integrate()")` and set lower and upper limits of integration to $1$ and $\infty$ using arguments `r ttcode("lower")` and `r ttcode("upper")`. By default, `r ttcode("integrate()")` prints the result along with an estimate of the approximation error to the console. However, the outcome is not a numeric value one can readily do further calculation with. In order to get only a numeric value of the integral, we need to use the `r ttcode("\\$")` operator in conjunction with `r ttcode("value")`. The `r ttcode("\\$")` operator is used to extract elements by name from an object of type `r ttcode("list")`. 
 
 ```{r, echo = T, eval = T, message = F, warning = F}
 # compute area under the density curve
@@ -541,7 +541,7 @@ A commonly known result is that $95\%$ probability mass of a standard normal lie
 To make statements about the  probability of observing outcomes of $Y$ in some specific range is more convenient when we standardize first as shown in Key Concept 2.4.
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
-cat('<div class = "keyconcept"> 
+cat('<div class = "keyconcept" id="KC2.4">
 <h3 class = "right"> Key Concept 2.4 </h3> 
 <h3 class = "left"> Computing Probabilities Involving Normal Random Variables </h3>
 
@@ -613,7 +613,14 @@ By moving the cursor over the plot you can see that the density is rotationally 
 
 The normal distribution has some remarkable characteristics. For example, for two jointly normally distribued variables $X$ and $Y$, the conditional expectation function is linear: one can show that $$ E(Y\vert X) = E(Y) + \rho \frac{\sigma_Y}{\sigma_X} (X - E(X)). $$ The application below shows standard bivariate normally distributed sample data along with the conditional expectation function $E(Y\vert X)$ and the marginal densities of $X$ and $Y$. All elements adjust accordingly as you vary the parameters.
 
-<iframe height="880" width="770" frameborder="0" scrolling="no" src="bivariatenormalv4.html"></iframe>
+```{r, echo=FALSE, results='asis'}
+if (my_output=="html"){
+  cat('
+<iframe height="880" width="770" frameborder="0" scrolling="no" src="bivariatenormalv4.html"></iframe>')
+} else {
+  cat("\\begin{center}\\textit{This interactive part of the book is only available in the HTML version.}\\end{center}")
+}
+```
 
 <a name="chisquare"></a>
 
@@ -794,15 +801,8 @@ $$ W/M \sim F_{M,\infty} \ \ , \ \ W \sim \chi^2_M. $$
 ```{r, echo=FALSE, results='asis'}
 if (my_output=="html"){
   cat('
-<!--html_preserve-->
-<div data-datacamp-exercise data-lang="r">
-<code data-type="sample-code">
-# You may use this widget to play around with the functions presented above
-</code>
-</div>
-<!--/html_preserve-->')
-} else {
-  cat('\\begin{center}\\textit{This interactive application is only available in the HTML version.}\\end{center}')
+<iframe src="DCL/playground.html" frameborder="0" scrolling="no" style="width:100%;height:340px"></iframe>
+')
 }  
 ```
 
@@ -817,7 +817,7 @@ The dice example uses this most simple sampling scheme. That is why it is called
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
 cat('
-<div class = "keyconcept"> 
+<div class = "keyconcept" id="KC2.5">
 <h3 class = "right"> Key Concept 2.5 </h3> 
 <h3 class = "left"> Simple Random Sampling and i.i.d. Random Variables </h3>
 <p>
@@ -1064,15 +1064,15 @@ In this section we will discuss two well known results that are used to approxim
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
 cat('
-<div class = "keyconcept"> 
+<div class = "keyconcept" id="KC2.6">
 <h3 class = "right"> Key Concept 2.6 </h3> 
 <h3 class = "left"> Convergence in Probability, Consistency and the Law of Large Numbers </h3>
 <p>
 The sample average $\\overline{Y}$ converges in probability to $\\mu_Y$: $\\overline{Y}$ is *consistent* for $\\mu_Y$ if the probability that $\\overline{Y}$ is in the range $(\\mu_Y - \\epsilon)$ to $(\\mu_Y + \\epsilon)$ becomes arbitrary close to $1$ as $n$ increases for any constant $\\epsilon > 0$. We write this as
 
-$$ \\overline{Y} \\xrightarrow[]{p} \\mu_Y. $$
+$$ P(\\mu_Y-\\epsilon \\leq \\overline{Y} \\leq \\mu_Y + \\epsilon) \\rightarrow 1, \\, \\epsilon > 0 \\text{ as } n\\rightarrow\\infty. $$
 
-Consider the independently and identically distributed random variables $Y_i, i=1,\\dots,n$ with expectation $E(Y_i)=\\mu_Y$ and variance $\\text{Var}(Y_i)=\\sigma^2_Y$. Under the condition that $\\sigma^2_Y< \\infty$, that is, large outliers are unlikely, the law of large numbers states
+Consider the independently and identically distributed random variables $Y_i, i=1,\\dots,n$ with expectation $E(Y_i)=\\mu_Y$ and variance $\\text{Var}(Y_i)=\\sigma^2_Y$. Under the condition that $\\sigma^2_Y< \\infty$, that is, large outliers are unlikely, the law of large numbers thus states that
 
 $$ \\overline{Y} \\xrightarrow[]{p} \\mu_Y. $$
 
@@ -1086,7 +1086,7 @@ The following application simulates a large number of coin tosses (you may set t
 cat('\\begin{keyconcepts}[Convergence in Probability\\comma Consistency and the Law of Large Numbers]{2.6}
 The sample average $\\overline{Y}$ converges in probability to $\\mu_Y$: $\\overline{Y}$ is \\textit{consistent} for $\\mu_Y$ if the probability that $\\overline{Y}$ is in the range $(\\mu_Y - \\epsilon)$ to $(\\mu_Y + \\epsilon)$ becomes arbitrary close to $1$ as $n$ increases for any constant $\\epsilon > 0$. We write this as
 
-$$ \\overline{Y} \\xrightarrow[]{p} \\mu_Y. $$
+$$ P(\\mu_Y-\\epsilon \\leq \\overline{Y} \\leq \\mu_Y + \\epsilon) \\rightarrow 1, \\, \\epsilon > 0 \\text{ as } n\\rightarrow\\infty. $$
 
 Consider the independently and identically distributed random variables $Y_i, i=1,\\dots,n$ with expectation $E(Y_i)=\\mu_Y$ and variance $\\text{Var}(Y_i)=\\sigma^2_Y$. Under the condition that $\\sigma^2_Y< \\infty$, that is, large outliers are unlikely, the law of large numbers states
 
@@ -1158,7 +1158,7 @@ There are several things to be said about this plot.
 
 ```{r, eval = my_output == "html", results='asis', echo=FALSE}
 cat('
-<div class = "keyconcept"> 
+<div class = "keyconcept" id="KC2.7">
 <h3 class = "right"> Key Concept 2.7 </h3> 
 <h3 class = "left"> The Central Limit Theorem </h3>
 <p>
@@ -1206,7 +1206,7 @@ Draw a large number of random samples, $10000$ say, of size $n$ from the Bernoul
 
 In `r ttcode("R")`, realize this as follows:
 
-1. We start by defining that the next four subsequently generated figures shall be drawn in a $2\times2$ array such that they can be easily compared. This is done by calling `r ttcode("par(mfrow = c(2, 2))")` before the figures are generated.
+1. We start by defining that the next four subsequently generated figures shall be drawn in a $2\times2$ array such that they can be easily compared. This is done by calling `par(mfrow = c(2, 2))` before generating the figures.
 
 2. We define the number of repetitions `r ttcode("reps")` as $10000$ and create a vector of sample sizes named `r ttcode("sample.sizes")`. We consider samples of sizes $2$, $10$, $50$ and $100$.
 
@@ -1281,7 +1281,7 @@ Suppose you are the lottery fairy in a weekly lottery, where $6$ out of $49$ *un
 
 </div>')
 } else {
-  cat('\\begin{center}\\textit{This interactive part of URFITE is only available in the HTML version.}\\end{center}')
+  cat('\\begin{center}\\textit{This interactive part of the book is only available in the HTML version.}\\end{center}')
 }
 ```
 

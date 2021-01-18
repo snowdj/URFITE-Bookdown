@@ -1,10 +1,16 @@
 ---
 title: "Introduction to Econometrics with R"
 cover-image: "images/cover.png"
-author: "Christoph Hanck, Martin Arnold, Alexander Gerber and Martin Schmelzer"
+author: "Christoph Hanck, Martin Arnold, Alexander Gerber, and Martin Schmelzer"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
+  bookdown::pdf_book:
+    pandoc_args: [ "--csl", "apa-old-doi-prefix.csl"]
+    includes:
+      in_header: preamble.tex
+    citation_package: natbib
+    keep_tex: yes
   bookdown::gitbook:
     config:
       toc:
@@ -29,7 +35,7 @@ link-citations: yes
 github-repo: "mca91/EconometricsWithR"
 description: "Beginners with little background in statistics and econometrics often have a hard time understanding the benefits of having programming skills for learning and applying Econometrics. 'Introduction to Econometrics with R' is an interactive companion to the well-received textbook 'Introduction to Econometrics' by James H. Stock and Mark W. Watson (2015). It gives a gentle introduction to the essentials of R programming and guides students in implementing the empirical applications presented throughout the textbook using the newly aquired skills. This is supported by interactive programming exercises generated with DataCamp Light and integration of interactive visualizations of central concepts which are based on the flexible JavaScript library D3.js."
 url: 'https\://www.econometrics-with-r.org/'
-tags: [Tutorial, Models, Econometrics, Causal Analysis, R Programming, Textbook]
+tags: [Tutorial, Linear models, Econometrics, Causal Analysis, R Programming, Textbook]
 ---
 
 # Preface {-}
@@ -69,7 +75,7 @@ Instead of confronting students with pure coding exercises and complementary cla
 
 #### Acknowledgement {-}
 
-We thank the *Stifterverband für die Deutsche Wissenschaft e.V.* and the *Ministry of Science and Research North Rhine-Westphalia* for their financial support. Also, we are grateful to Alexander Blasberg for proofreading and his effort in helping with programming the exercises.
+We thank the *Stifterverband für die Deutsche Wissenschaft e.V.* and the *Ministry of Culture and Science of North Rhine-Westphalia* for their financial support. Also, we are grateful to Alexander Blasberg for proofreading and his effort in helping with programming the exercises.
 A special thanks goes to Achim Zeileis (University of Innsbruck) and Christian Kleiber (University of Basel) for their advice and constructive criticism. Another thanks goes to Rebecca Arnold from the Münster University of Applied Sciences for several suggestions regarding the website design and for providing us with her nice designs for the book cover, logos and icons. We are also indebted to all past students of our introductory econometrics courses at the University of Duisburg-Essen for their feedback.
 
 ```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
@@ -100,7 +106,9 @@ To realize this, each chapter contains interactive `r ttcode("R")` programming e
 
 As you can see above, the widget consists of two tabs. `r ttcode("script.R")` mimics an `r ttcode(".R")`-file, a file format that is commonly used for storing `r ttcode("R")` code. Lines starting with a # are commented out, that is, they are not recognized as code. Furthermore, `r ttcode("script.R")` works like an exercise sheet where you may write down the solution you come up with. If you hit the button *Run*, the code will be executed, submission correctness tests are run and you will be notified whether your approach is correct. If it is not correct, you will receive feedback suggesting improvements or hints. The other tab, `r ttcode("R Console")`, is a fully functional `r ttcode("R")` console that can be used for trying out solutions to exercises before submitting them. Of course you may submit (almost any) `r ttcode("R")` code and use the console to play around and explore. Simply type a command and hit the *Enter* key on your keyboard.
 
-As an example, consider the following line of code presented in chunk below. It tells `r ttcode("R")` to compute the number of packages available on `r ttcode("CRAN")`. The code chunk is followed by the output produced.
+Looking at the widget above, you will notice that there is a <tt>></tt> in the right panel (in the console). This symbol is called "prompt" and indicates that the user can enter code that will be executed. To avoid confusion, we will not show this symbol in this book. Output produced by R code is commented out with <tt>#></tt>. 
+
+Most commonly we display R code together with the generated output in code chunks. As an example, consider the following line of code presented in chunk below. It tells `r ttcode("R")` to compute the number of packages available on `r ttcode("CRAN")`. The code chunk is followed by the output produced.
 
 ```{r}
 # check the number of R packages available on CRAN
@@ -111,6 +119,14 @@ Each code chunk is equipped with a button on the outer right hand side which cop
 
 Note that some lines in the widget are out-commented which ask you to assign a numeric value to a variable and then to print the variable's content to the console. You may enter your solution approach to `r ttcode("script.R")` and hit the button *Run* in order to get the feedback described further above. In case you do not know how to solve this sample exercise (don't panic, that is probably why you are reading this), a click on *Hint* will provide you with some advice. If you still can't find a solution, a click on *Solution* will provide you with another tab, `r ttcode("Solution.R")` which contains sample solution code. It will often be the case that exercises can be solved in many different ways and `r ttcode("Solution.R")` presents what we consider as comprehensible and idiomatic.
 
+## Colophon
+
+This book was build with:
+
+```{r, echo = FALSE}
+sessioninfo::session_info("itewrpkg")
+```
+
 ## A Very Short Introduction to `r ttcode("R")` and *RStudio*
 
 ```{r, fig.align='center', echo=FALSE, fig.cap="RStudio: the four panes"}
@@ -119,9 +135,9 @@ knitr::include_graphics('images/rstudio.jpg')
 
 #### `r ttcode("R")` Basics {-}
 
-As mentioned before, this book is not intended to be an introduction to `r ttcode("R")` but as a guide on how to use its capabilities for applications commonly encountered in undergraduate econometrics. Those having basic knowledge in `r ttcode("R")` programming will feel comfortable starting with Chapter \@ref(pt). This section, however, is meant for those who have not worked with `r ttcode("R")` or *RStudio* before. If you at least know how to create objects and call functions, you can skip it. If you would like to refresh your skills or get a feeling for how to work with *RStudio*, keep reading.
+As mentioned before, this book is not intended to be an introduction to `r ttcode("R")` but a guide on how to use its capabilities for applications commonly encountered in undergraduate econometrics. Those having basic knowledge in `r ttcode("R")` programming will feel comfortable starting with Chapter \@ref(pt). This section, however, is meant for those who have not worked with `r ttcode("R")` or *RStudio* before. If you at least know how to create objects and call functions, you can skip it. If you would like to refresh your skills or get a feeling for how to work with *RStudio*, keep reading.
 
-First of all start *RStudio* and open a new `r ttcode("R")` script by selecting *File*, *New File*, *R Script*. In the editor pane, type
+First of all, start *RStudio* and open a new `r ttcode("R")` script by selecting *File*, *New File*, *R Script*. In the editor pane, type
 
 ```{r, eval = F}
 1 + 1
@@ -133,7 +149,7 @@ and click on the button labeled *Run* in the top right corner of the editor. By 
 
 `r ttcode("R")` is of course more sophisticated than that. We can work with variables or, more generally, objects. Objects are defined by using the assignment operator `r ttcode("<-")`. To create a variable named `r ttcode("x")` which contains the value `r ttcode("10")` type `x <- 10` and click the button *Run* yet again. The new variable should have appeared in the environment pane on the top right. The console however did not show any results, because our line of code did not contain any call that creates output. When you now type `x` in the console and hit return, you ask `r ttcode("R")` to show you the value of `r ttcode("x")` and the corresponding value should be printed in the console.
 
-`r ttcode("x")` is a scalar, a vector of length $1$. You can easily create longer vectors by using the function `r ttcode("c()")` (*c* for "concatenate" or "combine"). To create a vector `r ttcode("y")` containing the numbers $1$ to $5$ and print it, do the following.
+`r ttcode("x")` is a scalar, a vector of length $1$. You can easily create longer vectors by using the function `r ttcode("c()")` (*c* is for "concatenate" or "combine"). To create a vector `r ttcode("y")` containing the numbers $1$ to $5$ and print it, do the following.
 
 ```{r, eval = T}
 y <- c(1, 2, 3, 4, 5)
@@ -161,7 +177,7 @@ Here are two simple examples.
 z <- seq(from = 1, to = 5, by = 1)
 
 # compute the mean of the enries in `z`
-mean(x = z)
+mean(z)
 ```
 
 In the first line we use a function called `r ttcode("seq()")` to create the exact same vector as we did in the previous section, calling it `r ttcode("z")`. The function takes on the arguments `r ttcode("from")`, `r ttcode("to")` and `r ttcode("by")` which should be self-explanatory.
@@ -174,3 +190,7 @@ Of course, all of the commands presented above also work in interactive widgets 
 ```{r, echo=FALSE, results='asis'}
 write_html(playground = T)
 ```
+
+
+
+

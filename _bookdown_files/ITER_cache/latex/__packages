@@ -1,9 +1,9 @@
 base
 knitr
+usethis
 devtools
 readxl
 dplyr
-bindrcpp
 MASS
 kableExtra
 carData
@@ -16,7 +16,6 @@ AER
 scales
 mvtnorm
 stargazer
-Formula
 plm
 tidyr
 np
@@ -29,4 +28,3 @@ quantmod
 forecast
 orcutt
 nlme
-usethis

@@ -33,7 +33,7 @@ cat('
 
 The linear regression model 
 
-$$Y_i = \\beta_0 + \\beta_1 + X_{1i} + \\beta_2 X_{2i} + \\dots + \\beta_k X_{ki} + u_i$$
+$$Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\dots + \\beta_k X_{ki} + u_i$$
 with a binary dependent variable $Y_i$ is called the linear probability model. In the linear probability model we have $$E(Y\\vert X_1,X_2,\\dots,X_k) = P(Y=1\\vert X_1, X_2,\\dots, X_3)$$ where $$ P(Y = 1 \\vert X_1, X_2, \\dots, X_k) = \\beta_0 + \\beta_1 + X_{1i} + \\beta_2 X_{2i} + \\dots + \\beta_k X_{ki}.$$
 
 Thus, $\\beta_j$ can be interpreted as the change in the probability that $Y_i=1$, holding constant the other $k-1$ regressors. Just as in common multiple regression, the $\\beta_j$ can be estimated using OLS and the robust standard error formulas can be used for hypothesis testing and computation of confidence intervals. 
@@ -256,7 +256,7 @@ Just as in the linear probability model we find that the relation between the pr
 
 The following code chunk reproduces Figure 11.2 of the book.
 
-<div class="unfolded">
+
 ```{r, fig.align='center'}
 # plot data
 plot(x = HMDA$pirat, 
@@ -280,7 +280,7 @@ y <- predict(denyprobit, list(pirat = x), type = "response")
 
 lines(x, y, lwd = 1.5, col = "steelblue")
 ```
-</div>
+
 
 The estimated regression function has a stretched "S"-shape which is typical for the CDF of a continuous random variable with symmetric PDF like that of a normal random variable. The function is clearly nonlinear and flattens out for large and small values of $P/I \ ratio$. The functional form thus also ensures that the predicted conditional probabilities of a denial lie between $0$ and $1$. 
 
@@ -383,7 +383,7 @@ coeftest(denylogit, vcov. = vcovHC, type = "HC1")
 
 The subsequent code chunk reproduces Figure 11.3 of the book. 
 
-<div class="unfolded">
+
 ```{r, fig.align='center'}
 # plot data
 plot(x = HMDA$pirat, 
@@ -416,7 +416,7 @@ legend("topleft",
        col = c("steelblue", "black"), 
        lty = c(1, 2))
 ```
-</div>
+
 
 Both models produce very similar estimates of the probability that a mortgage application will be denied depending on the applicants payment-to-income ratio.
 
@@ -784,7 +784,7 @@ Models (1) to (6) provide evidence that there is an effect of being African Amer
 
 See Chapters 11.4 and 11.5 of the book for a discussion of external and internal validity of this study and some concluding remarks on regression models where the dependent variable is binary.
 
-## Exercises 
+## Exercises {#exercises-11} 
 
 ```{r, echo=F, purl=F, results='asis'}
 if (my_output=="html") {
